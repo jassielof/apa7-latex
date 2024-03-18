@@ -371,6 +371,7 @@
 
 
 
+\def\prelastauthorsep{,}
 \def\lastauthorseparator{and}
 \def\acksname{Author Note}
 \def\keywordname{Keywords}
@@ -841,20 +842,18 @@
 \newcommand*{\authorsep}{}%
 \newcommand*{\lastauthor}{}%
 \newcommand*{\prelastauthor}{}%
-\newcommand*{\prelastauthorsep}{}%
 
 \newcommand{\displayauthors}{%
   \renewcommand*{\authorsep}{}%
   \renewcommand*{\lastauthor}{}%
   \renewcommand*{\prelastauthor}{}%
-  \renewcommand*{\prelastauthorsep}{}%
   \ifnum\value{NumberOfSuperscripts}=0% If no superscripts are specified, print authors without superscripts.
 \renewcommand*{\do}[1]{%
       \authorsep%
     \lastauthor%
     \renewcommand{\lastauthor}{%
       \renewcommand{\authorsep}{,
-        \renewcommand*{\prelastauthorsep}{,}}%
+      }%
       \renewcommand{\prelastauthor}{\prelastauthorsep\ \lastauthorseparator\ }% Terminated commands with \ to preserve following space
       ##1%
     }%
@@ -866,7 +865,7 @@
     \lastauthor%
     \renewcommand{\lastauthor}{%
       \renewcommand{\authorsep}{,
-        \renewcommand*{\prelastauthorsep}{,}}%
+      }%
       \renewcommand{\prelastauthor}{\prelastauthorsep\ \lastauthorseparator\ }% Terminated commands with \ to preserve following space
       ##1\textsuperscript{##2}%
     }%

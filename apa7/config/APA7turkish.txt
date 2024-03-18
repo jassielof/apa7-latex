@@ -34,6 +34,7 @@
 \renewcommand{\keywordname}{Anahtar Kelimeler}% Keywords
 \renewcommand{\notesname}{Dipnotlar}% Footnotes
 \renewcommand{\notelabel}{Not}%Note
+\renewcommand*{\prelastauthorsep}{}% Turkish does not use an Oxford comma like separator
 
 %% 
 %% Copyright (C) 2022 by Daniel A. Weiss <daniel.weiss.led at gmail.com>
