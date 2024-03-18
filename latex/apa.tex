@@ -1,0 +1,89 @@
+\documentclass[
+  stu,
+  12pt,
+  babel,
+  english,
+  floatsintext,
+]{apa7}
+
+\usepackage{lipsum}
+\usepackage{enumitem}
+\newlist{APAitemize}{itemize}{4} % 4 levels deep
+\setlist[APAitemize]{
+  label=\textbullet,
+  leftmargin=0in,
+  align=left,
+  listparindent=0.5in,
+  % labelsep=0in,
+  % labelwidth=0.5in,
+  itemsep=1pt,
+  topsep=0pt,
+  partopsep=0pt
+}
+
+
+\title{APA 7th Edition Student Template (Title)}
+\shorttitle{APA 7th Edition Student Template (Short Title)}
+% \leftheader{APA 7th Edition Student Template (Left Header)}
+% \journal{Journal of LaTeX Templates}
+% \volume{Volumen}
+% \ccoppy{Copyright Notice}
+% \copnum{Copyright Info
+
+% \author{Author Name}
+% \affiliation{Affiliation}
+
+\authorsnames[1,{2,3},1]{
+  Savannah C. St.\ John,
+  Fen-Lei Chang,
+  Carlos O. Vásquez III
+}
+\authorsaffiliations{
+  {Education Testing Service, Princeton, New Jersey, \ldots},
+  {MRC Cognition and Brain Science Unit, Cambridge, England},
+  {Department of Psychology, University of Cambridge}
+}
+
+\course{Course Name}
+\professor{Professor Name}
+\duedate{Due Date}
+
+% \abstract{
+%   \lipsum[1]
+% }
+
+\begin{document}
+\maketitle
+
+\section{First Section}
+\lipsum[1]
+
+\begin{APAenumerate}
+	\item First item
+	\item Second item
+	\item Third item
+\end{APAenumerate}
+
+\lipsum[2]
+
+\begin{APAitemize}
+	\item First item
+	\item \lipsum[2]
+	\item Third item
+	\begin{APAitemize}
+		\item First subitem
+		\item Second subitem
+		\item Third subitem
+	\end{APAitemize}
+\end{APAitemize}
+
+\subsection{First Subsection}
+\lipsum[2]
+
+\subsubsection{First Subsubsection}
+\lipsum[3]
+
+\section{Second Section}
+\lipsum[4]
+
+\end{document}
